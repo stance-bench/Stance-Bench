@@ -1,0 +1,45 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.DS_Store
+*.egg-info/
+build/
+dist/
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Model weights and local run outputs
+outputs/
+runs/
+logs/
+checkpoints/
+*.log
+*.pt
+*.pth
+*.safetensors
+*.tmp
+.writing-*
+
+# Local inference outputs
+*.checkpoint.jsonl
+*.manifest.json
+
+# Publish only the benchmark data files
+/data/*
+!/data/processed/
+!/data/evidence_dev.jsonl.gz
+!/data/evidence_test.jsonl.gz
+/data/processed/*
+!/data/processed/task_contexts.jsonl.gz
+!/data/processed/task_targets.jsonl.gz
+!/data/processed/stance_labels.jsonl.gz
+!/data/processed/taxonomies.jsonl.gz
+!/data/processed/splits.json
